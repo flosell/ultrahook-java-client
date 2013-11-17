@@ -25,6 +25,7 @@ public class InitializationUtil {
 		params.add(new BasicNameValuePair("version", version)); 
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(params);
 		post.setEntity(entity);
+		
 		CloseableHttpResponse resp = client.execute(post);
 		String respString = EntityUtils.toString(resp.getEntity());
 		InitResponse initResponse = new Gson().fromJson(respString, InitResponse.class);
