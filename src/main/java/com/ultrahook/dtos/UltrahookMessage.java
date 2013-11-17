@@ -8,7 +8,8 @@ public class UltrahookMessage {
 	private String query; 
 	private String path; 
 	private Map<String,String> headers;
-	private UltrahookMessage(String type, String body, String query,
+	
+	public UltrahookMessage(String type, String body, String query,
 			String path, Map<String, String> headers) {
 		super();
 		this.type = type;
