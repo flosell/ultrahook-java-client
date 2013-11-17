@@ -1,5 +1,6 @@
-package com.ultrahook;
+package com.ultrahook.processors;
 
+import com.ultrahook.UltrahookMessageProcessor;
 import com.ultrahook.dtos.UltrahookMessage;
 
 public class SysoutMessageProcessor implements UltrahookMessageProcessor{

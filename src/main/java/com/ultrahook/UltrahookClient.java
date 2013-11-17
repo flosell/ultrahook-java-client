@@ -17,6 +17,7 @@ import com.ultrahook.dtos.InitResponse;
 import com.ultrahook.internal.InitializationUtil;
 import com.ultrahook.internal.StreamConnection;
 import com.ultrahook.internal.StreamProcessor;
+import com.ultrahook.processors.SysoutMessageProcessor;
 
 
 public class UltrahookClient {
