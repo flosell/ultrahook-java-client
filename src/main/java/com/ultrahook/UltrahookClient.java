@@ -1,11 +1,12 @@
 package com.ultrahook;
 
+
 public class UltrahookClient {
-	private static final String VERSION = "0.1.2"; 
+	public static final String VERSION_0_1_2 = "0.1.2"; 
 
 	private final String key; 
 	private final String host; 
-	private final String version = VERSION;
+	private final String version = VERSION_0_1_2;
 	
 	public UltrahookClient(String key, String host) {
 		super();
@@ -16,5 +17,6 @@ public class UltrahookClient {
 	public void connect() {
 		
 	}
+	
 	
 }
