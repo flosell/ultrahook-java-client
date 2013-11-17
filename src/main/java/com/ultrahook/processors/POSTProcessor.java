@@ -35,8 +35,10 @@ public class POSTProcessor implements UltrahookMessageProcessor {
 			queryPart = ""; 
 		}
 		HttpPost post = new HttpPost("http://localhost:" + destPort + msg.getPath() + queryPart);
-		for (Entry<String,String> header : msg.getHeaders().entrySet()) {
-			post.addHeader(header.getKey(),header.getValue());
+		if (msg.getHeaders()!=null) {
+			for (Entry<String,String> header : msg.getHeaders().entrySet()) {
+				post.addHeader(header.getKey(),header.getValue());
+			}			
 		}
 		try {
 			post.setEntity(new StringEntity(msg.getBody()));
