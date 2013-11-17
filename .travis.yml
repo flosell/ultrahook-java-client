@@ -1,2 +1,3 @@
 language: java
-secure: "Hl/AlifU/67EFXMCCiJOQE4MNX6doQcbISrjPLMBpH1Wg2+oB8TqSCBZvULWzappvEdkZHHNZ+wOeYyasBfX4zsSXsgprmAKsYTmlT/rE1nIrVLvlbxaptb6V42+0UlaNbFy0fYzeCenoSGeIcLlWc4jixPKvKQYERQb1/EKDBw="
+env: 
+  - secure: "Hl/AlifU/67EFXMCCiJOQE4MNX6doQcbISrjPLMBpH1Wg2+oB8TqSCBZvULWzappvEdkZHHNZ+wOeYyasBfX4zsSXsgprmAKsYTmlT/rE1nIrVLvlbxaptb6V42+0UlaNbFy0fYzeCenoSGeIcLlWc4jixPKvKQYERQb1/EKDBw="
