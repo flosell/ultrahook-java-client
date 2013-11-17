@@ -26,6 +26,8 @@ public class UltrahookClient {
 	private final String host; 
 	private final String version = VERSION_0_1_2;
 
+	private StreamConnection streamConnection;
+
 	public UltrahookClient(String key, String host) {
 		super();
 		this.key = key;
@@ -34,7 +36,12 @@ public class UltrahookClient {
 	
 	public void connect() throws IOException {
 		InitResponse initResponse = InitializationUtil.sendInitRequest(key, host, version);
-		new StreamConnection(initResponse.getUrl(),new StreamProcessor(new SysoutMessageProcessor())).start(); 
+		streamConnection = new StreamConnection(initResponse.getUrl(),new StreamProcessor(new SysoutMessageProcessor()));
+		streamConnection.start(); 
+	}
+
+	public void disconnect() throws IOException {
+		streamConnection.stop(); 
 	}
 	
 	
