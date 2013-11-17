@@ -4,6 +4,9 @@ public class TestProperties {
 	public static String getAPIKey()  {
 		String key = System.getProperty("apiKey");
 		if (key==null || key.trim().isEmpty()) {
+			key = System.getenv("ULTRAHOOK_KEY"); 
+		}
+		if (key==null || key.trim().isEmpty()) {
 			throw new RuntimeException("no apiKey defined for tests"); 
 		}
 		return key; 
