@@ -24,8 +24,8 @@ public class StreamProcessorTest {
 		 InputStream is = new ByteArrayInputStream(data.getBytes()); 
 		 
 		 streamProcessor.process(is);
-		 
-		 verify(msgProcessor,times(2)).process(any(UltrahookMessage.class)); // TODO: more detailed assertions
+		 // only expecting one process-call as initialization-messages are ignored
+		 verify(msgProcessor,times(1)).process(any(UltrahookMessage.class)); // TODO: more detailed assertions
 		 
 	 }
 }
