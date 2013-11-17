@@ -32,5 +32,10 @@ public class UltrahookMessage {
 	public Map<String, String> getHeaders() {
 		return headers;
 	}
+	@Override
+	public String toString() {
+		return "UltrahookMessage [type=" + type + ", body=" + body + ", query="
+				+ query + ", path=" + path + ", headers=" + headers + "]";
+	}
 	
 }
